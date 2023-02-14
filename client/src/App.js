@@ -16,50 +16,90 @@ const App = () => {
   }
 
   return (
-    <div >
-      <form className=' text-center'>
-        <h2>Area (Square Feet)</h2>
-        <input type="text" />
-        <h2>BHK</h2>
-        <div >
-          <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
-          <label for="radio-bhk-1">1</label>
-          <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
-          <label for="radio-bhk-2">2</label>
-          <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
-          <label for="radio-bhk-3">3</label>
-          <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
-          <label for="radio-bhk-4">4</label>
-          <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
-          <label for="radio-bhk-5">5</label>
-        </div>
+    <div className=' flex flex-col justify-center items-center' >
+      <h className='mt-10 text-4xl'>Let me predict your Real Easte you looking for!</h>
+      <form className='flex flex-col justify-center items-center'>
+        <h2 className=' text-3xl p-5 mt-10'>Area (Square Feet)</h2>
+        <input type="number"  className=' text-3xl mb-3 rounded-lg p-2 ' />
+        <h2 className=' text-2xl mb-2'>Choose your BHK</h2>
+        
+        <ul class="items-center text-sm font-medium text-gray-200 bg-white-border border border-gray-500 rounded-lg sm:flex bg-cyan-100">
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+            <div class="flex items-center pl-3">
+                <input id="horizontal-list-radio-license" type="radio" value="1" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-100 dark:focus:ring-offset-gray-200 focus:ring-2 dark:bg-gray-200 dark:border-gray-200"/>
+                <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">1 </label>
+              </div>
+          </li>
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-id" type="radio" value="2" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">2</label>
+              </div>
+          </li>
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-millitary" type="radio" value="3" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">3</label>
+              </div>
+          </li>
+          <li class="w-14 dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-passport" type="radio" value="4" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">4</label>
+              </div>
+          </li>
+          <li class="w-16 dark:border-gray-600 sm:border-l">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-passport" type="radio" value="5" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">5</label>
+              </div>
+          </li>
+        </ul>
       </form>
 
-      <form className=' text-center'>
-        <h2>Bathrooms</h2>
-        <div >
-          <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
-          <label for="radio-bath-1">1</label>
-          <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
-          <label for="radio-bath-2">2</label>
-          <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
-          <label for="radio-bath-3">3</label>
-          <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
-          <label for="radio-bath-4">4</label>
-          <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
-          <label for="radio-bath-5">5</label>
+      <form className='flex flex-col justify-center items-center mt-5'>
+        <h2 className=' text-2xl mb-2'>Choose your Bathrooms</h2>
+        
+        <ul class="items-center w-full text-lg font-medium text-gray-200 bg-white- border border-gray-500 rounded-lg sm:flex bg-cyan-100">
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600 ">
+            <div class="flex items-center pl-3">
+                <input id="horizontal-list-radio-license" type="radio" value="1" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-100 dark:focus:ring-offset-gray-200 focus:ring-2 dark:bg-gray-200 dark:border-gray-200"/>
+                <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">1 </label>
+              </div>
+          </li>
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-id" type="radio" value="2" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">2</label>
+              </div>
+          </li>
+          <li class="w-14 border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-millitary" type="radio" value="3" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">3</label>
+              </div>
+          </li>
+          <li class="w-14 dark:border-gray-600">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-passport" type="radio" value="4" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">4</label>
+              </div>
+          </li>
+          <li class=" w-14 dark:border-gray-600 sm:border-l">
+              <div class="flex items-center pl-3">
+                  <input id="horizontal-list-radio-passport" type="radio" value="5" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                  <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-600">5</label>
+              </div>
+          </li>
+        </ul>
+        <h2 className=' mt-5 text-2xl'>Locaiton</h2>
+        <select id="countries" class="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option >Choose a location</option>
+        </select>
+        <button className=' bg-blue-300 w-60 rounded-lg pointer-events-auto my-8 text-2xl border border-green-200 p-2' onclick={onClickedEstimatePrice} type="button">Estimate the price!</button>
+        <div className='flex justify-center '>
+          <div className=' bg-green-400 w-60 rounded-lg text-center text-lg p-2'>{predictedPrice}  <span>Lakh</span></div>
         </div>
-        <h2>Locaiton</h2>
-        <div>
-          <select>
-            <option value={locations} onChange={onChangeSelect}>Choose a Location</option>
-          </select>
-        </div>
-        <button className=' bg-blue-300 w-40' onclick={onClickedEstimatePrice} type="button">Estimate Price</button>
-        <div className='flex justify-center'>
-          <div className=' bg-green-400 w-40 '>{predictedPrice}  24 <span>Lakh</span></div>
-        </div>
-        <h1 className= 'text-center'>hi</h1>
       </form>
 
       <div
