@@ -26,20 +26,20 @@ const App = () => {
   useEffect(() => {
     axios.get('http://127.0.0.1:5000/get_location_names')
       .then(res => {
-        console.log(res)
+        console.log('res', res)
         setLocation(res.data.locations)
       })
       .catch(err => {
         console.log(err)
       })
-  }, [location])
+  }, [])
   
   
   
 
   return (
     <div className=' flex flex-col justify-center items-center' >
-      <h1 className='mt-10 text-4xl'>Let me predict your Real Easte you looking htmlFor!</h1>
+      <h1 className='mt-10 text-4xl'>Let me predict your Real Easte you looking for!</h1>
       <form className='flex flex-col justify-center items-center'>
         <h2 className=' text-3xl p-5 mt-10'>Area (Square Feet)</h2>
         <input type="number"  className=' text-3xl mb-3 rounded-lg p-2 ' onChange={e => setArea(e.target.value)} />
