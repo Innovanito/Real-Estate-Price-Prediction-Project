@@ -19,23 +19,24 @@ const App = () => {
     console.log("BHK: ", bhk, typeof(bhk))
     console.log("Bathrooms: ", bathrooms, typeof(bathrooms))
     console.log("Location: ", location, typeof(location))
-    console.log("Selected Location: ", selectedLoc, typeof(selectedLoc))
+    console.log("Selected Location:", selectedLoc, typeof(selectedLoc))
     console.log("Predicted Price: ", predictedPrice, typeof(predictedPrice))
   }, [area, bhk, bathrooms, location, selectedLoc, predictedPrice])
 
   useEffect(() => {
     if (area && bhk && bathrooms && selectedLoc) {
       axios.post('http://127.0.0.1:5000/predict_home_price', {
-        location: selectedLoc,
-        sqft: area,
+        total_sqft: area,
         bhk: bhk,
-        bath: bathrooms
+        bath: bathrooms,
+        location: selectedLoc
       }).then(
         res => {
           console.log('predicted price:', res)
           setPredictedPrice(res.data.estimated_price)
         }
       ).catch(err => {
+        console.log('error occured!')
         console.log(err)
       })
     }
@@ -135,7 +136,7 @@ const App = () => {
         </ul>
         <h2 className=' mt-5 text-2xl'>Choose your Locaiton</h2>
         <select id="countries" onChange={e =>setSelectedLoc(e.target.value.trim())} className="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option disabled selected>Where do you want to search?</option>
+          <option disabled >Where do you want to search?</option>
           {/* map through location to make multiple option tag */}
           {location.map((loc, index) => {
             return (
