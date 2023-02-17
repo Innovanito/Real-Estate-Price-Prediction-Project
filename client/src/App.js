@@ -42,7 +42,6 @@ const App = () => {
     }
   }, [area, bhk, bathrooms, location, selectedLoc])
 
-
   useEffect(() => {
     axios.get('http://127.0.0.1:5000/get_location_names')
       .then(res => {
